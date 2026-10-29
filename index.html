@@ -1,1 +1,187 @@
-The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#060a12" />
+  <meta name="description" content="129besan — グラフ理論・機械学習・ソフトウェアエンジニアリングを横断する研究と開発のポートフォリオ。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="129besan — Research & Engineering" />
+  <meta property="og:description" content="From abstract structures to working systems." />
+  <title>129besan — Research & Engineering</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="src/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">メインコンテンツへ</a>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <canvas class="atmosphere" id="atmosphere" aria-hidden="true"></canvas>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="129besan — ページ先頭">
+      <span class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+      <span>129<span class="brand-light">besan</span><span class="brand-point">.</span></span>
+    </a>
+    <nav class="main-nav" aria-label="メインナビゲーション">
+      <a href="#about" data-nav="about">ABOUT</a>
+      <a href="#work" data-nav="work">WORK</a>
+      <a href="#approach" data-nav="approach">APPROACH</a>
+    </nav>
+    <a class="header-contact" href="https://github.com/129besan" target="_blank" rel="noopener noreferrer">
+      GITHUB <span aria-hidden="true">↗</span>
+    </a>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" aria-labelledby="hero-heading">
+      <div class="hero-coordinate coordinate-top" aria-hidden="true">35° · N / DIGITAL FRONTIER</div>
+      <div class="hero-copy">
+        <div class="eyebrow reveal"><span class="status-dot"></span> RESEARCHER <span class="eyebrow-slash">/</span> BUILDER <span class="eyebrow-year">— 2026</span></div>
+        <h1 id="hero-heading" class="hero-title reveal">
+          Structure<br />
+          <span class="hero-title-line">is <span class="italic-outline">everything</span><span class="hero-period">.</span></span>
+        </h1>
+        <p class="hero-jp reveal">抽象的な問いを、<strong>動く仕組み</strong>へ。</p>
+        <p class="hero-description reveal">グラフ理論の厳密な探究から、AI・システム開発まで。<br class="desktop-break" />数理的な視点と実装力を行き来しながら、問題を解きほぐしています。</p>
+        <div class="hero-actions reveal">
+          <a href="#work" class="button button-primary"><span>EXPLORE WORK</span><span class="button-arrow" aria-hidden="true">↘</span></a>
+          <a href="#about" class="button button-secondary">WHO I AM <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="インタラクティブな研究モチーフ">
+        <div class="orbit orbit-outer" aria-hidden="true"></div>
+        <div class="orbit orbit-middle" aria-hidden="true"></div>
+        <div class="orbit orbit-inner" aria-hidden="true"></div>
+        <div class="orbit-axis orbit-axis-a" aria-hidden="true"></div>
+        <div class="orbit-axis orbit-axis-b" aria-hidden="true"></div>
+        <div class="orbit-core" aria-hidden="true"><div class="core-spark"></div></div>
+        <div class="orbit-dot orbit-dot-one" aria-hidden="true"></div>
+        <div class="orbit-dot orbit-dot-two" aria-hidden="true"></div>
+        <div class="visual-label visual-label-top" aria-hidden="true"><span class="tiny-asterisk">✳</span> ABSTRACT / CONCRETE</div>
+        <div class="visual-label visual-label-bottom" aria-hidden="true">FIG 01 <span class="visual-label-line"></span> CONNECTED SYSTEMS</div>
+
+        <div class="signal-stage" id="signal-stage">
+          <div class="signal-fallback" id="signal-fallback">
+            <div class="signal-card" id="signal-fallback-card">
+              <div class="signal-head"><span class="signal-kicker">LIVE / STRUCTURE EXPLORER</span><span class="signal-led">● LIVE</span></div>
+              <div class="signal-title">Choose a perspective<span class="signal-cursor">_</span></div>
+              <div class="signal-switch" role="group" aria-label="研究テーマを選択">
+                <button class="signal-choice is-active" type="button" data-signal="graph" aria-pressed="true">01 / GRAPH</button>
+                <button class="signal-choice" type="button" data-signal="systems" aria-pressed="false">02 / SYSTEMS</button>
+              </div>
+              <p class="signal-caption" data-signal-caption>Find the structure. Prove the behavior.</p>
+              <div class="signal-foot"><span>INPUT → INSIGHT</span><span>↗ INTERACTIVE DOM</span></div>
+            </div>
+          </div>
+          <!-- Native HTML-in-Canvas/WebGPU stage. The standard HTML card above is the fallback. -->
+          <canvas id="html-stage" class="html-stage" content="drawable" layoutsubtree aria-label="WebGPU上で描画された操作可能なHTMLカード"></canvas>
+        </div>
+      </div>
+      <div class="hero-bottom" aria-hidden="true">
+        <span>SCROLL TO DISCOVER <span class="scroll-glyph">↓</span></span>
+        <span class="hero-bottom-index">INFORMATICS / MATHEMATICS / SYSTEMS</span>
+        <span>001 — ∞</span>
+      </div>
+    </section>
+
+    <section class="intro section-shell" id="about" aria-labelledby="about-heading">
+      <div class="section-kicker reveal"><span class="section-number">01</span><span class="section-kicker-rule"></span><span>THE THINKING</span></div>
+      <div class="intro-layout">
+        <h2 id="about-heading" class="section-big-title reveal">Between <span class="serif-word">proof</span><br />&amp; <span class="muted-heading">possibility.</span></h2>
+        <div class="intro-aside reveal">
+          <div class="crosshair" aria-hidden="true">＋</div>
+          <p>情報科学を学ぶ大学院生として、数理的な構造の理解と、実際に使えるソフトウェアの構築に取り組んでいます。</p>
+          <p>関心の中心にあるのは、<strong>複雑な問題をモデル化し、検証可能な形にすること。</strong>理論・実験・実装を分断せず、往復しながら考えることを大切にしています。</p>
+          <div class="intro-inline-tags"><span>GRAPH THEORY</span><span>MACHINE LEARNING</span><span>SYSTEMS</span></div>
+        </div>
+      </div>
+      <div class="intro-divider" aria-hidden="true"><span>OBSERVE</span><span>FORMALIZE</span><span>BUILD</span><span>VERIFY</span></div>
+    </section>
+
+    <section class="projects section-shell" id="work" aria-labelledby="work-heading">
+      <div class="section-kicker reveal"><span class="section-number">02</span><span class="section-kicker-rule"></span><span>SELECTED WORK</span></div>
+      <div class="section-heading-row reveal">
+        <div><h2 id="work-heading" class="section-big-title">Built to <span class="serif-word">explore.</span></h2><p class="section-subtitle">公開済みのプロジェクトと、その背景にある問い。</p></div>
+        <div class="work-count"><span class="count-number">04</span><span>SELECTED<br />PROJECTS</span></div>
+      </div>
+      <div class="project-grid">
+        <article class="project-card project-card-featured reveal" data-tilt>
+          <div class="card-top"><span class="project-index">[ 01 — RESEARCH TOOL ]</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+          <div class="project-art art-graph" aria-hidden="true">
+            <svg class="graph-diagram" viewBox="0 0 480 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g class="graph-edges" stroke="#89a6a8" stroke-opacity=".45" stroke-width="1.2">
+                <path d="M110 137L185 67L289 97L355 158L280 219L172 204L110 137Z"/>
+                <path d="M110 137L289 97M185 67L280 219M172 204L355 158M185 67L355 158M172 204L289 97"/>
+              </g>
+              <g class="graph-nodes"><circle cx="110" cy="137" r="12"/><circle cx="185" cy="67" r="12"/><circle cx="289" cy="97" r="12"/><circle cx="355" cy="158" r="12"/><circle cx="280" cy="219" r="12"/><circle cx="172" cy="204" r="12"/></g>
+              <circle class="graph-pulse" cx="185" cy="67" r="22" stroke="#d7ff70" stroke-width="1"/><circle class="graph-pulse graph-pulse-second" cx="280" cy="219" r="22" stroke="#d7ff70" stroke-width="1"/>
+              <text x="18" y="32" fill="#a2adba" font-size="11" font-family="monospace">Z(G) / FORCE PROCESS</text><text x="340" y="252" fill="#a2adba" font-size="11" font-family="monospace">n = 6</text>
+            </svg>
+            <span class="art-graph-side">BLACK / WHITE <span>001</span></span>
+          </div>
+          <div class="project-info"><div class="project-meta"><span>GRAPH THEORY</span><span>INTERACTIVE WEB</span></div><h3>Zero Forcing Lab</h3><p>Zero Forcing と Fort をブラウザで試せる数学実験室。彩色過程、全列挙、小グラフでの比較をインタラクティブに可視化します。</p><div class="project-links"><a href="https://129besan.github.io/zero-forcing-playground/" target="_blank" rel="noopener noreferrer">LIVE DEMO ↗</a><a href="https://github.com/129besan/zero-forcing-playground" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></div></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="card-top"><span class="project-index">[ 02 — MATHEMATICAL RESEARCH ]</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+          <div class="project-art art-fort" aria-hidden="true">
+            <div class="fort-coordinates">EXACT ENUMERATION<span>f(n) · λ</span></div>
+            <div class="fort-bars"><i style="--h:19%"></i><i style="--h:26%"></i><i style="--h:31%"></i><i style="--h:40%"></i><i style="--h:51%"></i><i style="--h:67%"></i><i style="--h:81%"></i><i style="--h:98%"></i></div>
+            <div class="fort-baseline">COMBINATORIAL GROWTH <span>→</span></div>
+          </div>
+          <div class="project-info"><div class="project-meta"><span>DISCRETE MATHEMATICS</span><span>PYTHON / C++</span></div><h3>Minimal Fort Growth</h3><p>グラフの極小Fortの個数と増大率を探る研究。厳密計数、構成法、計算機検証を組み合わせ、再現性を重視しています。</p><div class="project-links"><a href="https://github.com/129besan/minimal-fort-growth" target="_blank" rel="noopener noreferrer">RESEARCH REPOSITORY ↗</a></div></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="card-top"><span class="project-index">[ 03 — LOW-LEVEL SYSTEMS ]</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+          <div class="project-art art-os" aria-hidden="true">
+            <div class="terminal-head"><span><i></i><i></i><i></i></span><span>QEMU / UEFI CONSOLE</span></div>
+            <div class="terminal-body"><p><span>$</span> boot --target x86_64</p><p class="term-dim">[ ok ] uefi boot services</p><p class="term-dim">[ ok ] elf kernel loaded</p><p class="term-success">[ ok ] kernel started<span class="terminal-cursor">▌</span></p></div>
+            <div class="terminal-bottom">RUST <span>no_std</span></div>
+          </div>
+          <div class="project-info"><div class="project-meta"><span>RUST</span><span>OPERATING SYSTEMS</span></div><h3>homemadeOS</h3><p>Rustで取り組む自作OS。UEFIブートからカーネルへの制御移行までを、QEMU上のスモークテストとともに実装しています。</p><div class="project-links"><a href="https://github.com/129besan/homemadeOS" target="_blank" rel="noopener noreferrer">SOURCE CODE ↗</a></div></div>
+        </article>
+        <article class="project-card reveal" data-tilt>
+          <div class="card-top"><span class="project-index">[ 04 — WEB FOR PEOPLE ]</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+          <div class="project-art art-community" aria-hidden="true">
+            <div class="community-mark">A<span>↗</span>B<span>↗</span>C</div>
+            <div class="community-caption"><span>DESIGNING FOR ACCESS</span><span>COMMUNITY / WEB</span></div>
+            <div class="community-tile one"></div><div class="community-tile two"></div>
+          </div>
+          <div class="project-info"><div class="project-meta"><span>WEB DEVELOPMENT</span><span>INFORMATION DESIGN</span></div><h3>ABC Japan Website</h3><p>外国にルーツのある子どもたちの高校進学を支える情報サイト。必要な情報が伝わる構成とWeb実装に取り組みました。</p><div class="project-links"><a href="https://github.com/129besan/saitouhp2_abcjapan" target="_blank" rel="noopener noreferrer">SOURCE CODE ↗</a></div></div>
+        </article>
+      </div>
+      <p class="more-work reveal">MORE EXPERIMENTS, TOOLS &amp; LEARNING PROJECTS <a href="https://github.com/129besan?tab=repositories" target="_blank" rel="noopener noreferrer">EXPLORE GITHUB ↗</a></p>
+    </section>
+
+    <section class="approach section-shell" id="approach" aria-labelledby="approach-heading">
+      <div class="section-kicker reveal"><span class="section-number">03</span><span class="section-kicker-rule"></span><span>HOW I WORK</span></div>
+      <div class="approach-main">
+        <div class="approach-heading reveal"><h2 id="approach-heading" class="section-big-title">Curiosity,<br /><span class="serif-word">with rigor.</span></h2><p>難しい問題ほど、小さく確かめる。<br />思いつきを、再現できる結果へ。</p></div>
+        <div class="approach-steps">
+          <div class="approach-step reveal"><span class="step-id">01 /</span><div><h3>MODEL</h3><p>問題を定義し、構造と制約を見極める。</p></div><span class="step-arrow" aria-hidden="true">↗</span></div>
+          <div class="approach-step reveal"><span class="step-id">02 /</span><div><h3>EXPERIMENT</h3><p>仮説を実装し、計算・観察・測定で検証する。</p></div><span class="step-arrow" aria-hidden="true">↗</span></div>
+          <div class="approach-step reveal"><span class="step-id">03 /</span><div><h3>REFINE</h3><p>反例や失敗から設計を組み直し、改善する。</p></div><span class="step-arrow" aria-hidden="true">↗</span></div>
+        </div>
+      </div>
+      <div class="skill-strip reveal" aria-label="関心のある技術"><span>PYTHON</span><span>RUST</span><span>TYPESCRIPT</span><span>PYTORCH</span><span>LINUX</span><span>WEBGPU</span><span>GRAPH ALGORITHMS</span></div>
+    </section>
+
+    <section class="recognition section-shell" aria-labelledby="recognition-heading">
+      <div class="section-kicker reveal"><span class="section-number">04</span><span class="section-kicker-rule"></span><span>RECOGNITION</span></div>
+      <div class="recognition-row reveal"><div><span class="recognition-year">2026 / COMPETITION</span><h2 id="recognition-heading">AI自動運転チャレンジ 2026</h2><p>シミュレーション競技・学生部門</p></div><div class="recognition-badge"><span>03<span class="recognition-suffix">rd</span></span><small>PLACE / STUDENT DIVISION</small></div></div>
+    </section>
+
+    <section class="contact section-shell" id="contact" aria-labelledby="contact-heading">
+      <div class="section-kicker reveal"><span class="section-number">05</span><span class="section-kicker-rule"></span><span>THE NEXT CONNECTION</span></div>
+      <div class="contact-inner reveal"><p>THERE'S ALWAYS ANOTHER QUESTION.</p><h2 id="contact-heading">Let's build<br /><span class="serif-word">something <em>real.</em></span></h2><a class="contact-link" href="https://github.com/129besan" target="_blank" rel="noopener noreferrer"><span>FIND ME ON GITHUB</span><span class="contact-link-arrow" aria-hidden="true">↗</span></a></div>
+      <div class="footer-meta"><span>© <span id="year">2026</span> 129besan</span><span>DESIGNED &amp; BUILT WITH CURIOSITY</span><a href="#top">BACK TO TOP ↑</a></div>
+    </section>
+  </main>
+  <div class="cursor-spotlight" id="cursor-spotlight" aria-hidden="true"></div>
+  <div class="render-status" id="render-status" aria-live="polite"><span class="render-led"></span><span id="render-label">INITIALIZING VISUAL ENGINE</span><button id="motion-toggle" type="button" aria-pressed="true" aria-label="背景の動きを停止">MOTION ON</button></div>
+</body>
+</html>
