@@ -64,7 +64,7 @@ const navLinks=qsa('.main-nav a');
 const sectionObserver=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(link=>link.classList.toggle('is-active',link.dataset.nav===entry.target.id));}});
 },{rootMargin:'-15% 0px -72% 0px'});
-['about','work','approach'].forEach(id=>sectionObserver.observe(document.getElementById(id)));
+['about','work','experience'].forEach(id=>{const element=document.getElementById(id);if(element)sectionObserver.observe(element);});
 
 // A small amount of pointer-following depth is intentionally limited to desktop.
 const spot=qs('#cursor-spotlight');
