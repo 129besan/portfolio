@@ -26,7 +26,9 @@ This repository is ready for **GitHub Pages**: select **Settings → Pages → B
 
 ## Content / disclosure
 
-Featured project descriptions link to existing public repositories. The research work is described at a high level. The page intentionally does **not** contain contact details, home/lab addresses, unpublished manuscripts, internal internship/client information or employment claims. The 2026 autonomous-driving competition result is a self-reported highlight; remove it if public verification or disclosure is undesirable.
+Featured completed work links to existing public repositories; ongoing prototypes are labelled clearly. The research work is described at a high level. The page deliberately omits personal contact details, addresses, unpublished manuscripts, internal internship/client information and unverifiable project claims. The internships are labelled as short-term participation in 2026, not employment. Fricto/AppLockout and the Kaggle/creative-AI initiatives are clearly marked as ongoing/experimental; no production release, competition score or medal is claimed. The homemadeOS prototype is intentionally excluded because the author has not verified it works. The 2026 autonomous-driving competition result is a self-reported highlight; remove it if public verification or disclosure is undesirable.
+
+**Kaggle profile:** the verified Kaggle profile URL is not currently available. The Kaggle card is intentionally plain text until the author supplies the exact link; do not assume the GitHub handle matches. To add the link, replace `.profile-destination-pending` in `index.html` with a real `<a href="https://www.kaggle.com/...">` entry after verifying the URL.
 
 To customize, update text and links in `index.html`, theme values at the top of `styles.css`, and the visualization in `src/scene.js`.
 
